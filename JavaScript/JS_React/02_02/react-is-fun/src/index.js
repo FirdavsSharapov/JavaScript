@@ -1,25 +1,12 @@
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-// import './index.css';
-// import App from './App';
-// import * as serviceWorker from './serviceWorker';
-
-// ReactDOM.render(
-//   <React.StrictMode>
-//     <App />
-//   </React.StrictMode>,
-//   document.getElementById('root')
-// );
-
-// // If you want your app to work offline and load faster, you can change
-// // unregister() to register() below. Note this comes with some pitfalls.
-// // Learn more about service workers: https://bit.ly/CRA-PWA
+// If you want your app to work offline and load faster, you can change
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
 // serviceWorker.unregister();
-import React from 'react'
+
+import React, { Component } from 'react'
 import ReactDOM from 'react-dom'
 
-
-class Message extends React.Component {
+class Message extends Component {
   render() {
     console.log(this.props)
     return (
@@ -31,44 +18,44 @@ class Message extends React.Component {
   }
 }
 
-
 let skiData = {
   total: 50,
-  posder: 20,
+  powder: 20,
   backcountry: 10,
   goal: 100
 }
 
-class SkiDayCounter extends React.Component {
+class SkiDayCounter extends Component {
+  // Creating custom method
+
+  getPercent = decimal => {
+    return decimal * 100 + '%'
+  }
+
+  calcGoalProgress = (total, goal) => { return this.getPercent(total/goal)  }
+  
   render() {
+    const { total, powder, backcountry, goal } = this.props
     return (
       <section>
         <h2>Ski Days</h2>
         <div>
-          <p>Total Days: {this.props.total}</p>
+          <p>Total Days: {total}</p>
         </div>
         <div>
-          <p>Powder Days: {this.props.powder}</p>
+          <p>Powder Days: {powder}</p>
         </div>
         <div>
-          <p>backcountry Days: {this.props.backcountry}</p>
+          <p>backcountry Days: {backcountry}</p>
         </div>
         <div>
-          <p>Goal: {this.props.goal}</p>
+          <p>Goal Progress: {this.calcGoalProgress(total, goal)}</p>
+          
         </div>
       </section>
     )
   }
 }
-// var style = {
-//   backgroundColor: 'orange',
-//   color: 'white',
-// }
-
-
-
-// const title = React.createElement('ul', { id: 'title', className: 'header', style: style },
-//   React.createElement('li', {}, 'item on our list'))
 
 ReactDOM.render(
   // <Message age={50} msg="how are you?" color ="blue"/>
