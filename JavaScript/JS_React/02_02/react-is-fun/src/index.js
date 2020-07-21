@@ -25,37 +25,45 @@ let skiData = {
   goal: 100
 }
 
-class SkiDayCounter extends Component {
-  // Creating custom method
-
-  getPercent = decimal => {
-    return decimal * 100 + '%'
-  }
-
-  calcGoalProgress = (total, goal) => { return this.getPercent(total/goal)  }
-  
-  render() {
-    const { total, powder, backcountry, goal } = this.props
-    return (
-      <section>
-        <h2>Ski Days</h2>
-        <div>
-          <p>Total Days: {total}</p>
-        </div>
-        <div>
-          <p>Powder Days: {powder}</p>
-        </div>
-        <div>
-          <p>backcountry Days: {backcountry}</p>
-        </div>
-        <div>
-          <p>Goal Progress: {this.calcGoalProgress(total, goal)}</p>
-          
-        </div>
-      </section>
-    )
-  }
+const getPercent = decimal => {
+  return decimal * 100 + '%'
 }
+
+const calcGoalProgress = (total, goal) => { return getPercent(total / goal) }
+
+// function 
+const SkiDayCounter = (props) => {
+  return (
+    <section>
+      <h2>Ski Days</h2>
+      <div>
+        <p>Total Days: {props.total}</p>
+      </div>
+      <div>
+        <p>Powder Days: {props.powder}</p>
+      </div>
+      <div>
+        <p>Backcountry Days: {props.backcountry}</p>
+      </div>
+      <div>
+        <p>Goal Progress: {calcGoalProgress(props.total, props.goal)}</p>
+      </div>
+    </section>
+  )
+}
+
+// class SkiDayCounter extends Component {
+//   // Creating custom method
+
+
+
+//   render() {
+//     const { total, powder, backcountry, goal } = this.props
+//     return (
+
+//     )
+//   }
+// }
 
 ReactDOM.render(
   // <Message age={50} msg="how are you?" color ="blue"/>
