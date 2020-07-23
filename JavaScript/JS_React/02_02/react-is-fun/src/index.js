@@ -29,21 +29,30 @@ const Book = ({ title, author, pages }) => {
 }
 
 // adding the key 
-const Library = ({ books }) => {
-  return (
-    <div>
-      {books.map(
-        (book, i) =>
-          <Book
-            key={i}
-            title={book.title}
-            author={book.author}
-            pages={book.pages}
-          />
-      )
-      }
-    </div>
-  )
+class Library extends React.Component {
+  constructor(props) {
+    super(props)
+    this.state = { open: true }
+  }
+  render() {
+    console.log(this.state)
+    const { books } = this.props
+    return (
+      <div>
+        <h1>Library is {this.state.open ? 'Open' : 'Closed'}</h1>
+        {books.map(
+          (book, i) =>
+            <Book
+              key={i}
+              title={book.title}
+              author={book.author}
+              pages={book.pages}
+            />
+        )
+        }
+      </div>
+    )
+  }
 }
 
 render(
