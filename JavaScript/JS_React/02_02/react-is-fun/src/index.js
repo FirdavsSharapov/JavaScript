@@ -18,28 +18,39 @@ let bookList = [
 
 
 // Props and State
-const Book = ({ title, author, pages }) => {
+const Book = ({ title, author, pages, freeBookmark }) => {
   return (
     <section>
       <h2>{title}</h2>
       <p>By: {author}</p>
       <p>Pages: {pages}</p>
+      <p>Free bookmark Today: {freeBookmark ? "yes" : 'no'}</p>
     </section>
   )
 }
 
+// Function components
+const Hiring = () => <div>Hiring!</div>
+const NotHiring = () => <div>Not Hiring!</div>
+
 // adding the key 
 class Library extends React.Component {
-  state = { open: false }
+  state = {
+    open: true,
+    freeBookmark: true,
+    hiring: true
+  }
 
   toggleOpenClose = () => {
     this.setState({ open: !this.state.open })
+    this.setState({ hiring: !this.state.hiring })
   }
   render() {
     console.log(this.state)
     const { books } = this.props
     return (
       <div>
+        {this.state.hiring ? <Hiring/> : <NotHiring/>}
         <h1>Library is {this.state.open ? 'Open' : 'Closed'}</h1>
         <button onClick={this.toggleOpenClose}>Change</button>
         {books.map(
@@ -49,6 +60,7 @@ class Library extends React.Component {
               title={book.title}
               author={book.author}
               pages={book.pages}
+              freeBookmark={this.state.freeBookmark}
             />
         )
         }
