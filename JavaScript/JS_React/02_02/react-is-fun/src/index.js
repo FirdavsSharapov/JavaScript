@@ -7,6 +7,17 @@
 
 import React, { Component } from 'react'
 import { render } from 'react-dom'
+import Main from './components/Main.js'
+
+render(
+  <Main />,
+  document.getElementById('root')
+)
+
+
+
+
+
 
 // //Array of data
 // let bookList = [
@@ -95,15 +106,6 @@ import { render } from 'react-dom'
 //   </div>
 //   )
 // }
-
-import MyInfo from "./components/MyInfo.js"
-render(
-  <MyInfo />,
-  document.getElementById('root')
-)
-
-
-
 
 // class Message extends Component {
 //   render() {
