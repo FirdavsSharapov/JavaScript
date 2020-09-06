@@ -8,69 +8,97 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 
-//Array of data
-let bookList = [
-  { "title": "The Sun Also Rises", "author": "Earnest Hamingaway", "pages": 260 },
-  { "title": "White teeth", "author": "Zadie Smith", "pages": 480 },
-  { "title": "Cat's Crandle", "author": "Kurt Vonnegut", "pages": 304 },
-  { "title": "Cat's Crandle", "author": "Kurt Vonnegut", "pages": 304 },
-]
+// //Array of data
+// let bookList = [
+//   { "title": "The Sun Also Rises", "author": "Earnest Hamingaway", "pages": 260 },
+//   { "title": "White teeth", "author": "Zadie Smith", "pages": 480 },
+//   { "title": "Cat's Crandle", "author": "Kurt Vonnegut", "pages": 304 },
+//   { "title": "Cat's Crandle", "author": "Kurt Vonnegut", "pages": 304 },
+// ]
 
 
-// Props and State
-const Book = ({ title, author, pages, freeBookmark }) => {
-  return (
-    <section>
-      <h2>{title}</h2>
-      <p>By: {author}</p>
-      <p>Pages: {pages}</p>
-      <p>Free bookmark Today: {freeBookmark ? "yes" : 'no'}</p>
-    </section>
-  )
-}
+// // Props and State
+// const Book = ({ title, author, pages, freeBookmark }) => {
+//   return (
+//     <section>
+//       <h2>{title}</h2>
+//       <p>By: {author}</p>
+//       <p>Pages: {pages}</p>
+//       <p>Free bookmark Today: {freeBookmark ? "yes" : 'no'}</p>
+//     </section>
+//   )
+// }
 
-// Function components
-const Hiring = () => <div>Hiring!</div>
-const NotHiring = () => <div>Not Hiring!</div>
+// // Function components
+// const Hiring = () => <div>Hiring!</div>
+// const NotHiring = () => <div>Not Hiring!</div>
 
-// adding the key 
-class Library extends React.Component {
-  state = {
-    open: true,
-    freeBookmark: true,
-    hiring: true
-  }
+// // adding the key 
+// class Library extends React.Component {
+//   state = {
+//     open: true,
+//     freeBookmark: true,
+//     hiring: true
+//   }
 
-  toggleOpenClose = () => {
-    this.setState({ open: !this.state.open })
-    this.setState({ hiring: !this.state.hiring })
-  }
-  render() {
-    console.log(this.state)
-    const { books } = this.props
-    return (
-      <div>
-        {this.state.hiring ? <Hiring/> : <NotHiring/>}
-        <h1>Library is {this.state.open ? 'Open' : 'Closed'}</h1>
-        <button onClick={this.toggleOpenClose}>Change</button>
-        {books.map(
-          (book, i) =>
-            <Book
-              key={i}
-              title={book.title}
-              author={book.author}
-              pages={book.pages}
-              freeBookmark={this.state.freeBookmark}
-            />
-        )
-        }
-      </div>
-    )
-  }
-}
+//   toggleOpenClose = () => {
+//     this.setState({ open: !this.state.open })
+//     this.setState({ hiring: !this.state.hiring })
+//   }
+//   render() {
+//     console.log(this.state)
+//     const { books } = this.props
+//     return (
+//       <div>
+//         {this.state.hiring ? <Hiring/> : <NotHiring/>}
+//         <h1>Library is {this.state.open ? 'Open' : 'Closed'}</h1>
+//         <button onClick={this.toggleOpenClose}>Change</button>
+//         {books.map(
+//           (book, i) =>
+//             <Book
+//               key={i}
+//               title={book.title}
+//               author={book.author}
+//               pages={book.pages}
+//               freeBookmark={this.state.freeBookmark}
+//             />
+//         )
+//         }
+//       </div>
+//     )
+//   }
+// }
 
+
+// Reusable functional components in React
+// function MyApp(){
+//  return (
+//    <ul>
+//      <li>1</li>
+//      <li>2</li>
+//      <li>3</li>
+//    </ul>
+//  )
+// }
+
+// function MyInfo(){
+//   return(
+//   <div>
+//     <h1>My info</h1>
+//     <p>My name is Fred and I'm learning React in this course</p>
+//     <p>This is a list where I want to go</p>
+//     <ul>
+//       <li>Brasil</li>
+//       <li>Australia</li>
+//       <li>Europe</li>
+//     </ul>
+//   </div>
+//   )
+// }
+
+import MyInfo from "./components/MyInfo.js"
 render(
-  <Library books={bookList} />,
+  <MyInfo />,
   document.getElementById('root')
 )
 
