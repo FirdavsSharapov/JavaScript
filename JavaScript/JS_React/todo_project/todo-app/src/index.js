@@ -1,15 +1,17 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/style.css';
-import App from './components/App.js';
-import TimePredictor from './components/TimePredictor.js';
+import App from './components/App';
+import TimePredictor from './components/TimePredictor';
+import ReComponent from './components/ReComponent';
 import * as serviceWorker from './serviceWorker';
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <TimePredictor />
-    <App />
+    {/* <TimePredictor /> */}
+    {/* <App /> */}
+    <ReComponent />
   </React.StrictMode>,
   document.getElementById('root')
 );
