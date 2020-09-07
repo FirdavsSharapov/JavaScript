@@ -11,7 +11,12 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <TimePredictor /> */}
     {/* <App /> */}
-    <ReComponent />
+    <ReComponent 
+      name = "Kuzya"
+      phone = "3475694314"
+      email = "kuzya@gmail.com"
+      img = "http://placekitten.com/300/200"
+    />
   </React.StrictMode>,
   document.getElementById('root')
 );
