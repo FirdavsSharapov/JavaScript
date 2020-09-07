@@ -2,10 +2,13 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './style/style.css';
 import App from './components/App.js';
+import TimePredictor from './components/TimePredictor.js';
 import * as serviceWorker from './serviceWorker';
+
 
 ReactDOM.render(
   <React.StrictMode>
+    <TimePredictor />
     <App />
   </React.StrictMode>,
   document.getElementById('root')

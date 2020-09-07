@@ -15,8 +15,9 @@ function Main() {
         </div>
     );
 };
-// same as above function calls arrow functions
 
+
+// same as above function calls arrow functions
 const Main = () => (
     <div>
         <Header />

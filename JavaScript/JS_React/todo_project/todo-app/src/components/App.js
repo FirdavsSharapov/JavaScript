@@ -8,17 +8,17 @@ const days = [
     "Thursday",
     "Friday",
     "Saturday",
-    "Sunday"
+    "Sunday",
 ];
 
 function App() {
     const days_checkboxes =
         days.map(day => (
-            <div className=".checkboxes">
+            <span className=".checkboxes">
                 <input id={day} type="checkbox">
                 </input>
                 <p>{day}</p>
-            </div>
+            </span>
         ));
     return (
         <div className="body">
@@ -26,5 +26,6 @@ function App() {
         </div>
     );
 };
+
 
 export default App;
