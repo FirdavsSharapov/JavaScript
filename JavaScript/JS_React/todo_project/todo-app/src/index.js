@@ -4,6 +4,7 @@ import './style/style.css';
 import App from './components/App';
 import TimePredictor from './components/TimePredictor';
 import ReComponent from './components/ReComponent';
+import Joke from './components/Joke';
 import * as serviceWorker from './serviceWorker';
 
 
@@ -11,11 +12,15 @@ ReactDOM.render(
   <React.StrictMode>
     {/* <TimePredictor /> */}
     {/* <App /> */}
-    <ReComponent 
+    {/* <ReComponent 
       name = "Kuzya"
       phone = "3475694314"
       email = "kuzya@gmail.com"
       img = "http://placekitten.com/300/200"
+    /> */}
+    <Joke
+      question="What is your name?"
+      punchLine="Kuzya"
     />
   </React.StrictMode>,
   document.getElementById('root')
