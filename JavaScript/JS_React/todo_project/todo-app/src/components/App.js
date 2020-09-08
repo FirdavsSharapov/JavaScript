@@ -1,6 +1,7 @@
 import React from 'react';
 import '../style/style.css';
 
+
 const days = [
     "Monday",
     "Tuesday",
