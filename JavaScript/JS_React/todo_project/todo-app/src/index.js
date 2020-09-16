@@ -7,6 +7,7 @@ import ReComponent from './components/ReComponent';
 import Joke from './components/Joke';
 import ClassBasedComponents from './components/ClassBasedComponents';
 import * as serviceWorker from './serviceWorker';
+import StateGlobal from './components/StateGlobal';
 
 
 ReactDOM.render(
@@ -24,7 +25,9 @@ ReactDOM.render(
       punchLine="Kuzya"
     />
     {/* <ClassBasedComponents /> */}
+    <StateGlobal />,
   </React.StrictMode>,
+  
   document.getElementById('root')
 );
 
