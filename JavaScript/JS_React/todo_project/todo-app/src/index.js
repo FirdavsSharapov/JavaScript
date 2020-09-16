@@ -5,6 +5,7 @@ import App from './components/App';
 import TimePredictor from './components/TimePredictor';
 import ReComponent from './components/ReComponent';
 import Joke from './components/Joke';
+import ClassBasedComponents from './components/ClassBasedComponents';
 import * as serviceWorker from './serviceWorker';
 
 
@@ -22,6 +23,7 @@ ReactDOM.render(
       question="What is your name?"
       punchLine="Kuzya"
     />
+    {/* <ClassBasedComponents /> */}
   </React.StrictMode>,
   document.getElementById('root')
 );
