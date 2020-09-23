@@ -3,7 +3,7 @@ import React from 'react';
 // hhtps://scrimba.com/p/p4Mrt9/cQnMDHD
 
 class StateGlobal extends React.Component {
-    constractor() {
+    constructor() {
         super();
         this.state = {
             answer: 'Yes',

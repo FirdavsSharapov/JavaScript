@@ -7,6 +7,7 @@ import ReComponent from './components/ReComponent';
 import Joke from './components/Joke';
 import ClassBasedComponents from './components/ClassBasedComponents';
 import * as serviceWorker from './serviceWorker';
+import EventHandlerElements from './components/EventHandlerElements';
 
 
 ReactDOM.render(
@@ -23,7 +24,7 @@ ReactDOM.render(
       question="What is your name?"
       punchLine="Kuzya"
     />
-    {/* <ClassBasedComponents /> */}
+    <EventHandlerElements />
   </React.StrictMode>,
   document.getElementById('root')
 );
