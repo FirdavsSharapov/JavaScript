@@ -1,22 +1,24 @@
 import React from 'react';
 
-// hhtps://scrimba.com/p/p4Mrt9/cQnMDHD
+// https://scrimba.com/p/p4Mrt9/cQnMDHD
 
 class StateGlobal extends React.Component {
     constructor() {
         super();
         this.state = {
             answer: 'Yes',
+            question: 'Are you willing to land money?'
         };
     };
-    render(){
-        return(
+    render() {
+        return (
             <div>
                 <h1>Is state important to know? {this.state.answer}</h1>
-                
+                <p>Do you have any question?</p>
+                <p>{this.state.question}</p>
             </div>
-        )
-    }
-}
+        );
+    };
+};
 
-    export default StateGlobal;
+export default StateGlobal;
