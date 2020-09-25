@@ -7,11 +7,7 @@ import ReComponent from './components/ReComponent';
 import Joke from './components/Joke';
 import ClassBasedComponents from './components/ClassBasedComponents';
 import * as serviceWorker from './serviceWorker';
-<<<<<<< HEAD
 import EventHandlerElements from './components/EventHandlerElements';
-=======
-import StateGlobal from './components/StateGlobal';
->>>>>>> 859569aecd1d4d7896897e26cb593f995aa0e4eb
 
 
 ReactDOM.render(
@@ -28,12 +24,7 @@ ReactDOM.render(
       question="What is your name?"
       punchLine="Kuzya"
     />
-<<<<<<< HEAD
     <EventHandlerElements />
-=======
-    {/* <ClassBasedComponents /> */}
-    <StateGlobal />,
->>>>>>> 859569aecd1d4d7896897e26cb593f995aa0e4eb
   </React.StrictMode>,
   
   document.getElementById('root')
