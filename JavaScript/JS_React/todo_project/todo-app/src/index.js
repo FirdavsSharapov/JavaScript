@@ -8,6 +8,7 @@ import Joke from './components/Joke';
 import ClassBasedComponents from './components/ClassBasedComponents';
 import * as serviceWorker from './serviceWorker';
 import EventHandlerElements from './components/EventHandlerElements';
+import ToDo from './components/ToDo';
 
 
 ReactDOM.render(
@@ -20,13 +21,14 @@ ReactDOM.render(
       email = "kuzya@gmail.com"
       img = "http://placekitten.com/300/200"
     /> */}
-    <Joke
+    {/* <Joke
       question="What is your name?"
       punchLine="Kuzya"
     />
-    <EventHandlerElements />
+    <EventHandlerElements /> */}
+    <ToDo />
   </React.StrictMode>,
-  
+
   document.getElementById('root')
 );
 
