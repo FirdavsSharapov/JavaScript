@@ -7,6 +7,7 @@ function ToDoItem(props) {
             <input type="checkbox"
                 checked={props.item.completed}
                 onChange={() => console.log('Changed')}
+
             />
             <text>{props.item.text}</text>
         </div>

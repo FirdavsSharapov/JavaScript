@@ -29,12 +29,12 @@ class EventHandlerElements extends React.Component {
 
     decreaseValue() {
         this.setState(prevState => {
-            return{
-                count: prevState.count -1
+            return {
+                count: prevState.count - 1
             }
         })
     };
-    
+
 
     render() {
         return (
@@ -44,10 +44,37 @@ class EventHandlerElements extends React.Component {
                 <h1>{this.state.count}</h1>
                 <button onClick={this.increaseValue}>Add number</button>
                 <button onClick={this.decreaseValue}>Deduct number</button>
-                <Joke question = {this.state.count} punchLine={0 - this.state.count}/>
+                <Joke question={this.state.count} punchLine={0 - this.state.count} />
             </div>
         );
     };
 };
+
+
+// class EventHandlerElements extends React.Component {
+//     constructor() {
+//         super();
+//         this.state = {
+//             count: 0
+//         };
+//         this.onChangeHandler = this.onChangeHandler.bind(this)
+//     };
+//     onChangeHandler() {
+//         this.state(prevState => {
+//             return {
+//                 cout: prevState.count + 1
+//             };
+//         }
+//         )
+//     }
+//     render() {
+//         return (
+//             <div>
+//                 <h1>{this.state.count}</h1>
+//                 <button onChange={onChangeHandler}>Increase</button>
+//             </div>
+//         )
+//     }
+// };
 
 export default EventHandlerElements;
