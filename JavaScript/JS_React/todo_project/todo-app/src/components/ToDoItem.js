@@ -4,10 +4,10 @@ import './../style/style.css';
 function ToDoItem(props) {
     return (
         <div className="todo-item">
-            <input type="checkbox"
+            <input
+                type="checkbox"
                 checked={props.item.completed}
-                onChange={() => console.log('Changed')}
-
+                onChange={() => props.checkOnChange(props.item.id)}
             />
             <text>{props.item.text}</text>
         </div>
