@@ -9,7 +9,7 @@ import HourReminder from './HourReminder';
 
 ReactDOM.render(
   <React.StrictMode>
-    <HourReminder />
+    <App />
     {/* <MainContent /> */}
   </React.StrictMode>,
   document.getElementById('root')
