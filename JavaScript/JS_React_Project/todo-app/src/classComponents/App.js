@@ -1,4 +1,6 @@
 import React, {Component} from 'react';
+import InfoCardComponent from './InfoCardComponent';
+import LoginComponent from './LoginComponent';
 
 // State is immutable 
 // State can be used only in Class based components 
@@ -7,7 +9,7 @@ import React, {Component} from 'react';
 // child component
 
 
-class App extends Component {
+export default class App extends Component {
     constructor(){
         super()
         this.state = {
@@ -21,6 +23,8 @@ class App extends Component {
             <div>
                 <Header username={this.state.name} answer={this.state.answer}/>
                 <Greetings name={this.state.name} />
+                <InfoCardComponent name={this.state.name}/>
+                <LoginComponent />
             </div>
         )
     }
@@ -53,5 +57,3 @@ class Greetings extends Component {
         return (<h1>Good {timeOfDay}, {this.props.name}!</h1>)
     }
 }
-
-export default App;
