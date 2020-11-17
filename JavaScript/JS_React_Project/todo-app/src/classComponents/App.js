@@ -1,16 +1,56 @@
-import React from 'react';
-import Header from './Navbar';
-import MyInfo from './MyInfo';
+import React, {Component} from 'react';
+
+// State is immutable 
+// State can be used only in Class based components 
+// to declare the state we need to call constructor and super method 
+// super method brind all functions and method from parent component into
+// child component
 
 
-class App extends React.Component {
+class App extends Component {
+    constructor(){
+        super()
+        this.state = {
+            answer: "yes",
+            name: "Fred Sharapov"
+        }
+    }
+
     render() {
         return (
             <div>
-                <Header />
-                <MyInfo />
+                <Header username={this.state.name} answer={this.state.answer}/>
+                <Greetings name={this.state.name} />
             </div>
         )
+    }
+}
+
+class Header extends Component {
+    render(){
+        return (
+            <header>
+                <p>Welcome, {this.props.username}!</p>
+                <p>Did you reach this from the state? {this.props.answer}</p>
+            </header>
+        )
+    }
+}
+
+class Greetings extends Component {
+    render() {
+        const date = new Date();
+        const hours = date.getHours();
+        let timeOfDay
+
+        if (hours < 12) {
+            timeOfDay = "morning";
+        } else if (hours >= 12 && hours < 17) {
+            timeOfDay = "afternoon";
+        } else {
+            timeOfDay = "night";
+        }
+        return (<h1>Good {timeOfDay}, {this.props.name}!</h1>)
     }
 }
 
