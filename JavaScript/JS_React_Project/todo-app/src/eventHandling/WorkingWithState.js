@@ -9,6 +9,7 @@ export default class WorkingWithState extends Component {
         }
         this.onPositiveChange = this.onPositiveChange.bind(this)
         this.onnegativeChange = this.onnegativeChange.bind(this)
+        this.resetTheCount = this.resetTheCount.bind(this)
     }
 
     onPositiveChange() {
@@ -33,6 +34,9 @@ export default class WorkingWithState extends Component {
         })
     }
 
+    resetTheCount() {
+        this.setState({ count: 0 })
+    }
     render() {
 
         return (
@@ -40,6 +44,7 @@ export default class WorkingWithState extends Component {
                 <h1>{this.state.count}</h1>
                 <button onClick={this.onPositiveChange}>+1</button>
                 <button onClick={this.onnegativeChange}>-1</button>
+                <button onClick={this.resetTheCount}>Reset the count</button>
             </div>
         )
 
