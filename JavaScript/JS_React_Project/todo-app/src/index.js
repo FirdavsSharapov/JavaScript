@@ -2,7 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import App2 from './classComponents/App'
+import App2 from './classComponents/App';
+import App3 from './eventHandling/App';
 import reportWebVitals from './reportWebVitals';
 // import MyInfo from './MyInfo';
 // import MainContent from './MainContent';
