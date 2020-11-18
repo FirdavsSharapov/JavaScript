@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import App2 from './classComponents/App';
 import App3 from './eventHandling/App';
+import WorkingWithSate from './eventHandling/WorkingWithState';
 import reportWebVitals from './reportWebVitals';
 // import MyInfo from './MyInfo';
 // import MainContent from './MainContent';
@@ -13,7 +14,7 @@ import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <WorkingWithSate />
   </React.StrictMode>,
   document.getElementById('root')
 );
