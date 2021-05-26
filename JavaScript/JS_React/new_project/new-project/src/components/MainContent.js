@@ -1,9 +1,11 @@
 import React from 'react';
 import Footer from './Footer';
+import Navbar from './Navbar';
 
-export default function TestingPurpose() {
+export default function MainContent(){
     return (
         <div>
+            <Navbar />
             <h1>Firdavs Sharapov</h1>
             <p>Noob programmer that want to learn React</p>
             <ul>
@@ -13,7 +15,5 @@ export default function TestingPurpose() {
             </ul>
             <Footer />
         </div>
-    );
-};
-
-
+    )
+}
