@@ -3,10 +3,11 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import TestingPurpose from './components/TestingPurpose.js';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <TestingPurpose />
   </React.StrictMode>,
   document.getElementById('root')
 );
