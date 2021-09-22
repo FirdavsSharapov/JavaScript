@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
-import MainContent from './components/MainContent';
+// import MainContent from './components/MainContent';
+import ContactCard from './components/ContactCard';
+import TimeOfDay from './components/TimeOfDay';
 import App from './App';
+import JokeApp from './JokeApp';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+     <JokeApp/>
   </React.StrictMode>,
   document.getElementById('root')
 );
