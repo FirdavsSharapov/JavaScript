@@ -1,13 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
-import BigO from './components/big_o';
+// import App from './App';
+// import BigO from './components/big_o';
+import WorkingWithArray from './components/working_with_array';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <BigO />
+    <WorkingWithArray />
   </React.StrictMode>,
   document.getElementById('root')
 );
