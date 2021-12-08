@@ -17,10 +17,14 @@ console.log('pop \'f\' from array', string_array);
 string_array.unshift("x"); // O(n) because we shift the array and change the positions of the element which requires itteration
 console.log('unshift \'x\' to begining of the array', string_array);
 
-// Insert
-// unshift
+// Slice
 string_array.splice(2, 0, 'alien'); // O(n) because we shift the array and change the positions of the element which requires itteration
 console.log('splice \'alien\' we shifted array and add element in middle of the array', string_array);
+
+//Apend
+string_array.splice(2, 0, 'alien'); // O(n) because we shift the array and change the positions of the element which requires itteration
+console.log('splice \'alien\' we shifted array and add element in middle of the array', string_array);
+
 
 
 return (
