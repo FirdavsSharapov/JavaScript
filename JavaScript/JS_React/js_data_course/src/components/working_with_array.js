@@ -1,4 +1,5 @@
 import React from "react";
+import MyAray from "./MyArray";
 export default function WorkingWithArray(){
 
 // Defina working array
@@ -26,6 +27,13 @@ string_array.splice(2, 0, 'alien'); // O(n) because we shift the array and chang
 console.log('splice \'alien\' we shifted array and add element in middle of the array', string_array);
 
 
+const newArray = new MyAray();
+newArray.push('something cool');
+newArray.push('must happen');
+newArray.push('with you !');
+console.log(newArray);
+newArray.delete(1);
+console.log(newArray);
 
 return (
     <div>

@@ -3,12 +3,13 @@ import ReactDOM from 'react-dom';
 import './index.css';
 // import App from './App';
 // import BigO from './components/big_o';
-import WorkingWithArray from './components/working_with_array';
+// import WorkingWithArray from './components/working_with_array';
 import reportWebVitals from './reportWebVitals';
+import ReverseString from './components/reverse_string'
 
 ReactDOM.render(
   <React.StrictMode>
-    <WorkingWithArray />
+    <ReverseString />
   </React.StrictMode>,
   document.getElementById('root')
 );

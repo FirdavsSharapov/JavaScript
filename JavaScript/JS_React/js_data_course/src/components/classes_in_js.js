@@ -1,4 +1,3 @@
-/* eslint-disable no-useless-constructor */
 // reference type
 
 
