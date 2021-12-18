@@ -5,11 +5,12 @@ import './index.css';
 // import BigO from './components/big_o';
 // import WorkingWithArray from './components/working_with_array';
 import reportWebVitals from './reportWebVitals';
-import ReverseString from './components/reverse_string'
+// import ReverseString from './components/reverse_string'
+import LinkedList from './components/LinkedList';
 
 ReactDOM.render(
   <React.StrictMode>
-    <ReverseString />
+    <LinkedList />
   </React.StrictMode>,
   document.getElementById('root')
 );
