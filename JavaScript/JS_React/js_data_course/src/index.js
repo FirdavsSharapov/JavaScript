@@ -6,11 +6,11 @@ import './index.css';
 // import WorkingWithArray from './components/working_with_array';
 import reportWebVitals from './reportWebVitals';
 // import ReverseString from './components/reverse_string'
-import LinkedList from './components/LinkedList';
+// import LinkedList from './components/LinkedList';
 
 ReactDOM.render(
   <React.StrictMode>
-    <LinkedList />
+ 
   </React.StrictMode>,
   document.getElementById('root')
 );
