@@ -7,5 +7,6 @@ public class Arithmetic {
     int d = a%b;
     System.out.println(c);
     System.out.println(d);
+    System.out.println(d);
     }
 }
