@@ -7,3 +7,8 @@ Variable Naming Rules
 5. Should not be a class name, if class is also in use
 6. no limit on lenght of name7. Follow Camel Cases
 
+Literals
+
+int value = 25
+            ^
+            Literals

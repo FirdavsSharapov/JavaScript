@@ -19,11 +19,11 @@ hasNextFloat()
 
 public class Keyboard {
     public static void main(String args[]) {
-        Scanner s = new Scanner(System.in);
-        String name;
-        System.out.println("May I know your name?");
-        name = s.nextLine();
-        System.out.println("Welcome Mr. / Ms. " + name);
+        try (Scanner sc = new Scanner(System.in)) {
+            System.out.println("May I know your name?");
+            String name = sc.nextLine();
+            System.out.println("Welcome Mr. / Ms. " + name);
+        }
     }
 
 }
