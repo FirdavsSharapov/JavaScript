@@ -1,7 +1,9 @@
 import React from 'react';
 import './../style/style.css';
 
+
 function ToDoItem(props) {
+
     return (
         <div className="todo-item">
             <input
@@ -15,3 +17,4 @@ function ToDoItem(props) {
 };
 
 export default ToDoItem;
+
